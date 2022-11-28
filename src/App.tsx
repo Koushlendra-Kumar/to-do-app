@@ -2,7 +2,7 @@ import React from 'react';
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex justify-center items-center bg-black text-white">
       Hello, World!
     </div>
   );
