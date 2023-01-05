@@ -55,14 +55,14 @@ export default class Todos extends React.Component< any, MyState >{
                             Status
                         </label>
                         <div className='flex justify-start items-center'>
-                            <input type='checkbox' />
-                            <label className='ml-2'>
+                            <input type='checkbox' name='pending' id='pending'/>
+                            <label className='ml-2' htmlFor='pending'>
                                 Pending
                             </label>
                         </div>
                         <div className='flex justify-start items-center'>
-                            <input type='checkbox' />
-                            <label className='ml-2'>
+                            <input type='checkbox' name='completed' id='completed'/>
+                            <label className='ml-2' htmlFor='completed'>
                                 Completed
                             </label>
                         </div>
