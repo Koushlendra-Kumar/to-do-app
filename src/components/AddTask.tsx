@@ -25,7 +25,7 @@ export default class Todos extends React.Component< any, MyState >{
 
     render() {
         return (
-            <div className='bg-white max-w-fit box-border border-black border-2 rounded-3xl m-4 p-5 fixed mx-auto inset-x-0'>
+            <div className='bg-white max-w-fit box-border border-black border rounded-3xl m-4 p-5 fixed mx-auto inset-x-0'>
                 <form onSubmit={this.handleSubmit}>
                     <div className='mt-3 flex flex-col justify-center items-start'>
                         <label 
@@ -34,7 +34,7 @@ export default class Todos extends React.Component< any, MyState >{
                             Task
                         </label>
                         <input 
-                            className='border-2 border-gray-600 rounded-lg p-1 box-border'
+                            className='border border-gray-600 rounded-lg p-1 box-border'
                             type='text' 
                             name='task' 
                             defaultValue={this.state.task} />
@@ -47,7 +47,7 @@ export default class Todos extends React.Component< any, MyState >{
                             <span className='text-gray-500 font-normal text-sm'>(optional)</span>
                         </label>
                         <textarea 
-                            className='border-gray-600 border-2 p-1'
+                            className='border-gray-600 border p-1'
                             value={this.state.description} />
                     </div>
                     <div className='mt-3'>
