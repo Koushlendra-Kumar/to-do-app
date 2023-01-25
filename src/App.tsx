@@ -55,7 +55,7 @@ class App extends React.Component <any, any> {
         <div className='flex flex-col justify-start items-start border border-black rounded-xl p-5 mt-4 box-border'>
           <ul className='w-96 overflow-auto'>
             {this.state.tasks.map((task: any) => {
-              return <li className='border box-border p-2 border-black rounded' key={ task.id }>{ task.title }</li>
+              return <li className='border box-border p-2 border-black rounded mt-2' key={ task.id }>{ task.title }</li>
             })}
           </ul>
         </div>
