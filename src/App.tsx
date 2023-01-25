@@ -13,6 +13,7 @@ class App extends React.Component <any, any> {
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleKeyEvent = this.handleKeyEvent.bind(this);
   }
   
   handleChange(e: any) {
@@ -25,8 +26,7 @@ class App extends React.Component <any, any> {
     }) 
   }
 
-  handleClick(e: any) {
-    e.preventDefault();
+  handleClick() {
     if(this.state.task.title !== '') {
       this.setState({
         tasks : [...this.state.tasks, this.state.task],
@@ -39,11 +39,17 @@ class App extends React.Component <any, any> {
     } 
   }
 
+  handleKeyEvent(e: any){
+    if(e.key === 'Enter'){
+      this.handleClick();
+    }
+  }
+
   render ()  {
     return(
       <div className='flex flex-col justify-center items-center'>
         <div className='bg-blue-500 rounded-xl p-5 flex flex-row' >
-          <input className='border border-black p-4' type='text' value={ this.state.task.title } onChange={ this.handleChange } name='task' placeholder='Add task here' />
+          <input className='border border-black p-4' type='text' value={ this.state.task.title } onKeyDown={ this.handleKeyEvent } onChange={ this.handleChange } name='task' placeholder='Add task here' />
           <button className='border border-white text-white bg-green-600 ml-4 p-4 font-bold rounded-full' type='button' onClick={ this.handleClick }>Add</button>
         </div>
         <div className='flex flex-col justify-start items-start border border-black rounded-xl p-5 mt-4 box-border'>
